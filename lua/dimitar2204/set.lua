@@ -1,5 +1,6 @@
 vim.opt.foldenable = true
-vim.opt.foldmethod = 'manual'
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.relativenumber = true
 vim.opt.nu = true
 

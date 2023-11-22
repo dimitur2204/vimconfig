@@ -1,3 +1,5 @@
+vim.opt.foldenable = true
+vim.opt.foldmethod = 'manual'
 vim.opt.relativenumber = true
 vim.opt.nu = true
 

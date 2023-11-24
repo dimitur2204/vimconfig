@@ -1,4 +1,9 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+local api = require("nvim-tree.api")
+
+vim.keymap.set("n", "<leader>pv", function()
+    api.tree.toggle({find_file = true})
+end)
+
 vim.api.nvim_set_keymap('n', '<s-w>', '<c-w>', {noremap=true})
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

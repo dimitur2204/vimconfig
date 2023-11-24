@@ -50,4 +50,6 @@ use({
 })
 
 use("github/copilot.vim")
+use('nvim-tree/nvim-tree.lua')
+
 end)

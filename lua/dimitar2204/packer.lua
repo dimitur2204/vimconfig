@@ -51,5 +51,11 @@ use({
 
 use("github/copilot.vim")
 use('nvim-tree/nvim-tree.lua')
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 
 end)

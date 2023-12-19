@@ -16,6 +16,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("v", "p", "\"+dP")
 
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
@@ -27,9 +28,18 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<C-f>", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.keymap.set("n", "<leader>f", function()
     vim.cmd("Neoformat")
 end)
 
+vim.keymap.set("n", "<S-Up>", "<cmd>resize +2<CR>")
+vim.keymap.set("n", "<S-Down>", "<cmd>resize -2<CR>")
+vim.keymap.set("n", "<S-Right>", "<cmd>vertical resize -2<CR>")
+vim.keymap.set("n", "<S-Left>", "<cmd>vertical resize +2<CR>")
+
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+vim.keymap.set("n", "<S-h>", "<cmd>bnext<CR>")
+vim.keymap.set("n", "<S-l>", "<cmd>bprevious<CR>")

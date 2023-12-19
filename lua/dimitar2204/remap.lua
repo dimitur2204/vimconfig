@@ -33,8 +33,8 @@ vim.keymap.set("n", "<leader>f", function()
     vim.cmd("Neoformat")
 end)
 
-vim.keymap.set("n", "<S-Up>", "<cmd>resize +2<CR>")
-vim.keymap.set("n", "<S-Down>", "<cmd>resize -2<CR>")
+vim.keymap.set("n", "<S-Up>", "<cmd>resize -2<CR>")
+vim.keymap.set("n", "<S-Down>", "<cmd>resize +2<CR>")
 vim.keymap.set("n", "<S-Right>", "<cmd>vertical resize -2<CR>")
 vim.keymap.set("n", "<S-Left>", "<cmd>vertical resize +2<CR>")
 

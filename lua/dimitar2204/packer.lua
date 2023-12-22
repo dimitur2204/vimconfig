@@ -55,7 +55,9 @@ use({
 })
 
 use("github/copilot.vim")
+use 'nvim-tree/nvim-web-devicons'
 use('nvim-tree/nvim-tree.lua')
+
 
 use {
     "JoosepAlviste/nvim-ts-context-commentstring",

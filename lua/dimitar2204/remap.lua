@@ -4,6 +4,27 @@ vim.keymap.set("n", "<leader>pv", function()
     api.tree.toggle({find_file = true})
 end)
 
+
+-- Function to yank selected text into register 'a', move to normal mode, and initialize a search query
+function VisualSearch()
+  -- Yank the currently selected text into register 'a'
+  vim.fn.setreg('a', vim.fn.getreg('"'))
+
+  -- Move to normal mode and reselect the last visual selection
+  vim.api.nvim_feedkeys('gv', 'n', true)
+
+  -- Initialize a search query with the yanked text and escape it for safe search use
+  local query = vim.fn.getreg('a')
+  local escaped_query = vim.fn.escape(query, '/\\')
+  vim.fn.setreg('/', escaped_query)
+
+  -- Display the search query in the command line
+  vim.api.nvim_out_write('Search Query: ' .. query .. '\n')
+end
+
+-- Map the function to <leader>vs
+vim.api.nvim_set_keymap('v', '<leader>vs', [[:lua VisualSearch()<CR>]], { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap('n', '<s-w>', '<c-w>', {noremap=true})
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

@@ -7,6 +7,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
+require('nvim-web-devicons').setup()
 require("nvim-tree").setup()
 
 vim.g.matchparen = 1

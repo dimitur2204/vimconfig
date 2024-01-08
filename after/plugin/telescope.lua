@@ -32,6 +32,9 @@ vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>gb', builtin.git_branches, {}) 
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 telescope.setup{
+    defaults = {
+        file_ignore_patterns = { "node_modules" },
+    },
   pickers = {
       live_grep = {
         mappings = {

@@ -5,11 +5,6 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
-
--- empty setup using defaults
-require('nvim-web-devicons').setup()
-require("nvim-tree").setup()
-
 vim.g.matchparen = 1
 
 vim.opt.foldenable = true
